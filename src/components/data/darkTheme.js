@@ -26,5 +26,6 @@ export const darkTheme = {
     /* CSS LIGHT THEME TEXT COLORS*/
     color_text: "#ffffff",
     color_text_oposite: "#121212",
-    color_border: "#E5E7EB"
+    color_border: "#E5E7EB",
+    color_inner_input: "#374151"
 };

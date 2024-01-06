@@ -35,7 +35,7 @@ const CurrentChat = () => {
             <div className="current-chat" style={{ backgroundColor: theme.color_surface_200, color: theme.color_text }}>
                 {/* Display current chat messages */}
                 {chatMessages.map((message) => (
-                    <div key={message.id} className="chat-message">
+                    <div key={message.id} className={`chat-message ${message.user === "CurrentUser" ? 'sent-by-current-user' : 'sent-by-other-user'}`}>
                         <span className="username">{message.user}</span>
                         <span className="message">{message.message}</span>
                     </div>
@@ -47,10 +47,11 @@ const CurrentChat = () => {
                 <input
                     type="text"
                     placeholder="Type your message..."
+                    style={{backgroundColor: theme.color_inner_input, color: theme.color_text}}
                     value={messageInput}
                     onChange={handleInputChange}
                 />
-                <button onClick={sendMessage}>Send</button>
+                <i className="material-icons send-icon" onClick={sendMessage}>send</i>
             </div>
         </div>
     );

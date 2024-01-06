@@ -26,4 +26,5 @@ export const lightTheme = {
     /* CSS LIGHT THEME TEXT COLORS*/
     color_text: "#121212",
     color_text_oposite: "#ffffff",
+    color_inner_input: "#f3f4f6"
 };
